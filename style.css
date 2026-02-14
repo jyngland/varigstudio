@@ -1,0 +1,167 @@
+:root{
+  --bg: #f3efe6;
+  --ink: #2b2b2b;
+  --muted: rgba(43,43,43,.65);
+  --rule: rgba(43,43,43,.25);
+  --max: 940px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page container */
+.page{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 40px 28px 80px;
+}
+
+/* Header */
+.top{
+  padding: 10px 0 26px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 46px;
+}
+
+.logo{
+  display:block;
+  height: 48px;
+  width: auto;
+}
+
+/* Layout */
+.hero{
+  display:grid;
+  grid-template-columns: 280px 1fr;
+  gap: 70px;
+  align-items:start;
+}
+
+/* Portrait */
+.portrait{
+  margin:0;
+  width:100%;
+  max-width: 280px;
+}
+
+.portrait img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* Text column */
+.copy{
+  max-width: 520px;
+}
+
+/* Heading */
+.copy h1{
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0 0 22px;
+  letter-spacing: -0.01em;
+}
+
+/* Body text */
+.copy p{
+  font-family: "EB Garamond", ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 22px;
+}
+
+/* Contact + address */
+.details{
+  margin-top: 46px;
+  display:grid;
+  gap: 22px;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.link{
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(43,43,43,.25);
+}
+.link:hover{
+  border-bottom-color: rgba(43,43,43,.5);
+}
+
+.with{
+  margin-top: 28px;
+}
+
+.with-label{
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.with-list{
+  font-size: 13px;
+  letter-spacing: .01em;
+}
+
+/* Mobile */
+@media (max-width: 820px){
+
+  .hero{
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .portrait{
+    max-width: 220px;
+  }
+
+  .logo{
+    height: 42px;
+  }
+
+  .copy{
+    max-width: 460px;
+  }
+
+  .copy h1{
+    font-size: 24px;
+  }
+
+  .copy p{
+    font-size: 17px;
+  }
+
+}
+
+@media (max-width: 420px){
+
+  .page{
+    padding: 32px 20px 64px;
+  }
+
+  .portrait{
+    max-width: 200px;
+  }
+
+  .copy h1{
+    font-size: 22px;
+  }
+
+  .copy p{
+    font-size: 16px;
+  }
+
+}
